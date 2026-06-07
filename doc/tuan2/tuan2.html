@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - Tìm kiếm & Đánh giá thông tin học thuật</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            padding: 2rem;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #0f0f0f;
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a2a2a;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: #60a5fa;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #38bdf8;
+            margin: 1.8rem 0 0.8rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #2d2d2d;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: #facc15;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+
+        .badge {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            border: 1px solid #334155;
+        }
+
+        .info-block {
+            background: #141414;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        code {
+            background: #1a1a1a;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #facc15;
+            border: 1px solid #2d2d2d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.8rem;
+        }
+
+        th, td {
+            border: 1px solid #2d2d2d;
+            padding: 0.6rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a1a1a;
+            color: #facc15;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #1a1a1a;
+        }
+
+        .rating-high {
+            color: #34d399;
+            font-weight: bold;
+        }
+
+        .rating-medium {
+            color: #facc15;
+            font-weight: bold;
+        }
+
+        .rating-low {
+            color: #f87171;
+            font-weight: bold;
+        }
+
+        ul, ol {
+            margin: 0.5rem 0 1rem 1.8rem;
+        }
+
+        li {
+            margin: 0.3rem 0;
+        }
+
+        .warning {
+            background: #2d1f00;
+            border-left: 4px solid #facc15;
+            padding: 0.6rem 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #2d2d2d;
+            margin: 1.5rem 0;
+        }
+
+        .ref-list {
+            font-size: 0.8rem;
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .ref-list li {
+            margin: 0.5rem 0;
+            padding-left: 1rem;
+            text-indent: -1rem;
+        }
+
+        .link {
+            word-break: break-all;
+        }
+        .link a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+        .link a:hover {
+            text-decoration: underline;
+            color: #93c5fd;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .container { padding: 1.2rem; }
+            table { font-size: 0.65rem; }
+            th, td { padding: 0.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="badge">📚 BÀI 2 · TÌM KIẾM & ĐÁNH GIÁ THÔNG TIN HỌC THUẬT</div>
+
+    <h1>BÁO CÁO NGHIÊN CỨU</h1>
+    <h2>Giải pháp nâng cao độ tin cậy trong hệ thống nhận dạng hình ảnh của AI</h2>
+
+    <div class="info-block">
+        <p><strong>Học viên:</strong> Nguyễn Quốc Cường</p>
+        <p><strong>MSSV:</strong> 25022799</p>
+        <p><strong>Ngày:</strong> 14/03/2026</p>
+    </div>
+
+    <hr>
+
+    <!-- ========== 1. GIỚI THIỆU ========== -->
+    <h2>1. GIỚI THIỆU CHỦ ĐỀ NGHIÊN CỨU</h2>
+    <p>Hệ thống nhận dạng hình ảnh dựa trên trí tuệ nhân tạo (AI) đã đạt được những bước tiến vượt bậc trong thập kỷ qua, với ứng dụng rộng rãi trong y tế (chẩn đoán hình ảnh), giao thông (xe tự hành), sản xuất thông minh (kiểm tra chất lượng) và an ninh (giám sát). Công nghệ cốt lõi đằng sau những hệ thống này chủ yếu dựa trên mạng nơ-ron tích chập (CNN) và gần đây là các kiến trúc transformer, cho phép máy tính "hiểu" nội dung hình ảnh với độ chính xác ngày càng cao.</p>
+    <p>Tuy nhiên, bên cạnh những thành tựu ấn tượng, các hệ thống này đang đối mặt với thách thức lớn về <strong>độ tin cậy (trustworthiness)</strong>. Các mô hình deep learning thường được mô tả như "hộp đen" (black-box) do khả năng giải thích kém, dễ bị tổn thương trước các tấn công đối nghịch (adversarial attacks), và phụ thuộc nhiều vào chất lượng dữ liệu huấn luyện.</p>
+    <p>Chủ đề nghiên cứu này tập trung vào việc <strong>khảo sát các giải pháp nâng cao độ tin cậy cho hệ thống nhận dạng hình ảnh của AI</strong>, đặc biệt thông qua các kỹ thuật AI có thể giải thích (XAI) và các phương pháp phát hiện ảnh tổng hợp.</p>
+
+    <!-- ========== 2. QUY TRÌNH TÌM KIẾM ========== -->
+    <h2>2. QUY TRÌNH TÌM KIẾM THÔNG TIN</h2>
+    <p>Quá trình tìm kiếm tài liệu được thực hiện trên các nguồn sau:</p>
+    <ul>
+        <li><strong>Cơ sở dữ liệu học thuật:</strong> Google Scholar, arXiv.org, MDPI Open Access, ThaiJo</li>
+        <li><strong>Tạp chí khoa học chuyên ngành:</strong> Technologies Journal, ECTI-CIT Transactions, IJAM Journal, IJSRET</li>
+        <li><strong>Sách chuyên khảo:</strong> BPB Publications, Livres Numériques Divers</li>
+        <li><strong>Nguồn mở trên internet:</strong> TNO, Oracle, Microsoft (Azure), Syncfusion</li>
+    </ul>
+    <p><strong>Từ khóa tìm kiếm chính:</strong> "machine vision trustworthiness", "explainable AI computer vision", "deep learning image recognition reliability", "AI-generated image detection", "CNN interpretability".</p>
+    <p><strong>Toán tử tìm kiếm nâng cao đã sử dụng:</strong></p>
+    <ul>
+        <li><code>"machine vision trustworthiness"</code> - Tìm kiếm cụm từ chính xác</li>
+        <li><code>site:arxiv.org "computer vision" reliability</code> - Giới hạn trên arXiv</li>
+        <li><code>filetype:pdf "explainable AI" image recognition</code> - Tìm tài liệu PDF</li>
+        <li><code>intitle:"trust" AND "deep learning" vision</code> - Tìm trong tiêu đề</li>
+    </ul>
+
+    <!-- ========== 3. BẢNG ĐÁNH GIÁ NGUỒN TIN ========== -->
+    <h2>3. BẢNG TỔNG HỢP VÀ ĐÁNH GIÁ ĐỘ TIN CẬY CÁC NGUỒN THÔNG TIN</h2>
+    <table>
+        <thead>
+            <tr><th>STT</th><th>Tên tài liệu (Định dạng Harvard)</th><th>Loại nguồn</th><th>Tác giả / Cơ quan xuất bản</th><th>Đánh giá độ tin cậy</th><th>Link truy cập</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td>
+                <td>TNO (2026) <em>Deep Vision extracts information from images</em></td>
+                <td>Website tổ chức nghiên cứu</td>
+                <td>TNO (Tổ chức Nghiên cứu Khoa học Ứng dụng Hà Lan)</td>
+                <td class="rating-high">Cao: Viện nghiên cứu uy tín châu Âu</td>
+                <td class="link"><a href="https://www.tno.nl/en/technology-science/technologies/deep-vision" target="_blank">https://www.tno.nl/en/technology-science/technologies/deep-vision</a></td>
+            </tr>
+            <tr><td>2</td>
+                <td>Kupriyanov, A. et al. (2025) 'Eyes of the Future: Decoding the World Through Machine Vision', <em>Technologies</em>, 13(11), p. 507</td>
+                <td>Bài báo khoa học (Review)</td>
+                <td>Các trường đại học Nga / MDPI (Tạp chí Open Access có phản biện)</td>
+                <td class="rating-high">Rất cao: Bài tổng quan trên tạp chí khoa học, có chỉ số DOI</td>
+                <td class="link"><a href="https://www.mdpi.com/2227-7080/13/11/507" target="_blank">https://www.mdpi.com/2227-7080/13/11/507</a></td>
+            </tr>
+            <tr><td>3</td>
+                <td>Anoma, J. (2025) <em>Mastering Neural Network Computer Vision with TensorFlow and Keras</em></td>
+                <td>Sách chuyên khảo</td>
+                <td>Jean Anoma / BPB Publications</td>
+                <td class="rating-high">Cao: Sách chuyên khảo từ nhà xuất bản có uy tín</td>
+                <td class="link"><a href="https://blackwells.co.uk/bookshop/product/9789365897609" target="_blank">https://blackwells.co.uk/bookshop/product/9789365897609</a></td>
+            </tr>
+            <tr><td>4</td>
+                <td>Tasnim, N. et al. (2025) 'AI-Generated Image Detection: An Empirical Study and Future Research Directions', <em>arXiv preprint arXiv:2511.02791</em></td>
+                <td>Bài báo khoa học (Preprint)</td>
+                <td>Nusrat Tasnim và cộng sự / arXiv.org</td>
+                <td class="rating-high">Cao: Bản thảo trên arXiv, phương pháp thực nghiệm chặt chẽ</td>
+                <td class="link"><a href="https://arxiv.org/abs/2511.02791" target="_blank">https://arxiv.org/abs/2511.02791</a></td>
+            </tr>
+            <tr><td>5</td>
+                <td>Oracle (2025) <em>Pretrained Image Analysis Models</em>. Oracle Help Center</td>
+                <td>Tài liệu kỹ thuật</td>
+                <td>Oracle Corporation</td>
+                <td class="rating-medium">Trung bình: Tài liệu hướng dẫn sử dụng sản phẩm thương mại</td>
+                <td class="link"><a href="https://docs.oracle.com/en-us/iaas/Content/vision/using/pretrained_image_analysis_models.htm" target="_blank">https://docs.oracle.com/en-us/iaas/Content/vision/using/pretrained_image_analysis_models.htm</a></td>
+            </tr>
+            <tr><td>6</td>
+                <td>Ilman, N. et al. (2025) 'The Role of Deep Learning Architectures in Computer Vision and Natural Language Processing', <em>IJAM Journal</em></td>
+                <td>Bài báo khoa học</td>
+                <td>Nhiều tác giả / IJAM Journal</td>
+                <td class="rating-high">Cao: Bài tổng quan trên tạp chí chuyên ngành</td>
+                <td class="link"><a href="http://ijamjournal.org/ijam/publication/index.php/ijam/article/view/784" target="_blank">http://ijamjournal.org/ijam/publication/index.php/ijam/article/view/784</a></td>
+            </tr>
+            <tr><td>7</td>
+                <td>Long, P. & Song, Y. (2025) <em>Deep Learning for Image Recognition</em></td>
+                <td>Sách chuyên khảo</td>
+                <td>Peng Long, Yu Song / Livres Numériques Divers</td>
+                <td class="rating-high">Cao: Sách chuyên khảo cập nhật về nhận dạng hình ảnh</td>
+                <td class="link"><a href="https://books.google.com/books/about/Deep_Learning_for_Image_Recognition.html?id=vi1D0QEACAAJ" target="_blank">https://books.google.com/books/about/Deep_Learning_for_Image_Recognition.html?id=vi1D0QEACAAJ</a></td>
+            </tr>
+            <tr><td>8</td>
+                <td>Tanawongsuwan, R. et al. (2025) 'Evaluating Trust in CNN Transfer Learning with Flower Image Classification via Heatmap-Based XAI', <em>ECTI-CIT Transactions</em>, 19(3), pp. 392-405</td>
+                <td>Bài báo khoa học (Research Article)</td>
+                <td>Đại học Mahidol, Thái Lan / ThaiJo</td>
+                <td class="rating-high">Rất cao: Nghiên cứu gốc có thực nghiệm, sử dụng XAI</td>
+                <td class="link"><a href="https://www.researchgate.net/publication/394041956_Evaluating_Trust_in_CNN_Transfer_Learning_with_Flower_Image_Classification_via_Heatmap-Based_XAI" target="_blank">https://www.researchgate.net/publication/394041956_Evaluating_Trust_in_CNN_Transfer_Learning_with_Flower_Image_Classification_via_Heatmap-Based_XAI</a> (cần đăng nhập ResearchGate)</td>
+            </tr>
+            <tr><td>9</td>
+                <td>Syncfusion (2026) <em>Azure AI Computer Vision Services</em></td>
+                <td>Sách điện tử kỹ thuật</td>
+                <td>Syncfusion, Inc.</td>
+                <td class="rating-medium">Trung bình: Tài liệu hướng dẫn thực hành, mang tính ứng dụng</td>
+                <td class="link"><a href="https://www.syncfusion.com/succinctly-free-ebooks/azure-ai-services-succinctly/azure-ai-computer-vision-services" target="_blank">https://www.syncfusion.com/succinctly-free-ebooks/azure-ai-services-succinctly/azure-ai-computer-vision-services</a></td>
+            </tr>
+            <tr><td>10</td>
+                <td>Benasir Begam, F. & Agalya, A. (2025) 'Advancements and Applications of Machine Vision: A Review of Computational Paradigms and Future Prospects in Intelligent Systems', <em>International Journal of Scientific Research & Engineering Trends</em>, 11(1)</td>
+                <td>Bài báo khoa học</td>
+                <td>VISTAS, Ấn Độ / IJSRET</td>
+                <td class="rating-medium">Khá: Bài tổng quan, cập nhật các mô hình mới</td>
+                <td class="link"><a href="https://ijsret.com/wp-content/uploads/IJSRET_V11_issue1_277.pdf" target="_blank">https://ijsret.com/wp-content/uploads/IJSRET_V11_issue1_277.pdf</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========== 4. PHÂN TÍCH ========== -->
+    <h2>4. PHÂN TÍCH VÀ THẢO LUẬN</h2>
+
+    <h3>4.1 Xu hướng phát triển của hệ thống nhận dạng hình ảnh</h3>
+    <p>Theo Kupriyanov và cộng sự (2025), hệ thống thị giác máy tính đang chuyển dịch từ các thuật toán xử lý ảnh cổ điển sang các kiến trúc deep learning phức tạp như CNN, GAN và transformer. Các mô hình này cho phép trích xuất đặc trưng và phân loại đối tượng với độ chính xác cao. Tuy nhiên, bài báo cũng chỉ ra ba thách thức lớn: (1) sự khan hiếm dữ liệu gán nhãn, (2) chi phí tính toán lớn, và (3) giới hạn về thời gian xử lý thực.</p>
+
+    <h3>4.2 Vấn đề độ tin cậy và giải pháp từ AI có thể giải thích (XAI)</h3>
+    <p>Tanawongsuwan và cộng sự (2025) đã đánh giá độ tin cậy của CNN trong phân loại ảnh hoa thông qua kỹ thuật Grad-CAM. Kết quả cho thấy có sự khác biệt giữa đặc trưng được mô hình trích xuất và kỳ vọng của con người. Nghiên cứu nhấn mạnh sự cần thiết của đánh giá dựa trên XAI để tăng cường độ tin cậy, đặc biệt trong các ứng dụng tương tác người-máy.</p>
+
+    <h3>4.3 Thách thức mới: Phát hiện ảnh do AI tạo ra</h3>
+    <p>Tasnim và cộng sự (2025) chỉ ra ba khoảng trống quan trọng trong các phương pháp phát hiện ảnh do AI tạo ra hiện tại: (i) thiếu chuẩn hóa trong đánh giá, (ii) giao thức huấn luyện không nhất quán, và (iii) thiếu các chỉ số đánh giá toàn diện. Nghiên cứu đề xuất một khung đánh giá thống nhất để cải thiện khả năng tổng quát hóa.</p>
+
+    <h3>4.4 Ứng dụng thực tiễn và giải pháp từ công nghiệp</h3>
+    <p>TNO tập trung vào nhận dạng hành vi và AI lai kết hợp tri thức chuyên gia. Oracle cung cấp các mô hình tiền huấn luyện cho phát hiện đối tượng, phân loại ảnh và nhận diện khuôn mặt. Microsoft Azure AI Computer Vision cung cấp các dịch vụ phân tích ảnh trên đám mây, yêu cầu đăng ký đặc biệt cho Face API để tuân thủ quyền riêng tư.</p>
+
+    <h3>4.5 Hạn chế của nghiên cứu hiện tại</h3>
+    <ul>
+        <li>Phần lớn nghiên cứu tập trung vào hiệu suất mà chưa chú trọng đến tính bền vững trước các biến đổi môi trường.</li>
+        <li>Các phương pháp XAI chưa được tích hợp rộng rãi trong quy trình phát triển hệ thống.</li>
+        <li>Thiếu một khung lý thuyết thống nhất cho các nghiên cứu về tấn công đối nghịch và phòng thủ.</li>
+    </ul>
+
+    <!-- ========== 5. KẾT LUẬN ========== -->
+    <h2>5. KẾT LUẬN</h2>
+    <p>Tổng hợp từ 10 nguồn tài liệu, có thể thấy hệ thống nhận dạng hình ảnh của AI đang đối mặt với bài toán kép: vừa phải nâng cao độ chính xác, vừa phải đảm bảo độ tin cậy và khả năng giải thích. Các giải pháp nâng cao độ tin cậy đang được phát triển theo ba hướng chính:</p>
+    <ol>
+        <li><strong>Tích hợp XAI vào quy trình phát triển</strong> để hiểu rõ cơ chế ra quyết định của mô hình và phát hiện sai lệch.</li>
+        <li><strong>Phát triển các phương pháp phát hiện ảnh tổng hợp</strong> nhằm đảm bảo tính xác thực của dữ liệu đầu vào.</li>
+        <li><strong>Kết hợp tri thức chuyên gia (hybrid AI)</strong> để tăng độ chính xác và khả năng thích ứng.</li>
+    </ol>
+    <p>Hướng nghiên cứu trong tương lai cần tập trung vào xây dựng các chuẩn đánh giá thống nhất cho độ tin cậy, phát triển kiến trúc mô hình vừa hiệu quả vừa có khả năng giải thích cao, và tích hợp các ràng buộc về đạo đức, pháp lý vào quy trình thiết kế.</p>
+
+    <hr>
+
+    <!-- ========== TÀI LIỆU THAM KHẢO ========== -->
+    <h2>DANH MỤC TÀI LIỆU THAM KHẢO (Định dạng Harvard)</h2>
+    <ul class="ref-list">
+        <li>Benasir Begam, F. and Agalya, A. (2025) 'Advancements and Applications of Machine Vision: A Review of Computational Paradigms and Future Prospects in Intelligent Systems', <em>International Journal of Scientific Research & Engineering Trends</em>, 11(1). <a href="https://ijsret.com/wp-content/uploads/IJSRET_V11_issue1_277.pdf" target="_blank" style="color:#60a5fa;">[PDF]</a></li>
+        <li>Ilman, N., Prakash, N., Shardulkumar, A.J., Krishna, V.R. and Kumar, V. (2025) 'The Role of Deep Learning Architectures in Computer Vision and Natural Language Processing: A Comprehensive Review', <em>IJAM Journal</em>. <a href="http://ijamjournal.org/ijam/publication/index.php/ijam/article/view/784" target="_blank" style="color:#60a5fa;">[Link]</a></li>
+        <li>Kupriyanov, A. et al. (2025) 'Eyes of the Future: Decoding the World Through Machine Vision', <em>Technologies</em>, 13(11), p. 507. <a href="https://www.mdpi.com/2227-7080/13/11/507" target="_blank" style="color:#60a5fa;">[Link]</a></li>
+        <li>Long, P. and Song, Y. (2025) <em>Deep Learning for Image Recognition</em>. Livres Numériques Divers. <a href="https://books.google.com/books/about/Deep_Learning_for_Image_Recognition.html?id=vi1D0QEACAAJ" target="_blank" style="color:#60a5fa;">[Google Books]</a></li>
+        <li>Oracle (2025) <em>Pretrained Image Analysis Models</em>. Oracle Help Center. <a href="https://docs.oracle.com/en-us/iaas/Content/vision/using/pretrained_image_analysis_models.htm" target="_blank" style="color:#60a5fa;">[Link]</a></li>
+        <li>Syncfusion (2026) <em>Azure AI Computer Vision Services</em>. <a href="https://www.syncfusion.com/succinctly-free-ebooks/azure-ai-services-succinctly/azure-ai-computer-vision-services" target="_blank" style="color:#60a5fa;">[Link]</a></li>
+        <li>Tanawongsuwan, R., Phongsuphap, S. and Mongkolwat, P. (2025) 'Evaluating Trust in CNN Transfer Learning with Flower Image Classification via Heatmap-Based XAI', <em>ECTI-CIT Transactions</em>, 19(3), pp. 392-405. <a href="https://www.researchgate.net/publication/394041956_Evaluating_Trust_in_CNN_Transfer_Learning_with_Flower_Image_Classification_via_Heatmap-Based_XAI" target="_blank" style="color:#60a5fa;">[ResearchGate]</a></li>
+        <li>Tasnim, N., Uddin, K. et al. (2025) 'AI-Generated Image Detection: An Empirical Study and Future Research Directions', <em>arXiv preprint arXiv:2511.02791</em>. <a href="https://arxiv.org/abs/2511.02791" target="_blank" style="color:#60a5fa;">[Link]</a></li>
+        <li>TNO (2026) <em>Deep Vision extracts information from images</em>. <a href="https://www.tno.nl/en/technology-science/technologies/deep-vision" target="_blank" style="color:#60a5fa;">[Link]</a></li>
+    </ul>
+
+    <hr>
+    <div class="warning" style="background: #0f2f1f; border-left-color: #34d399;">
+        ✅ <strong>Kết quả đạt được:</strong> Đã tổng hợp và đánh giá 10 nguồn tài liệu học thuật, xác định được 3 hướng giải pháp chính cho vấn đề độ tin cậy của AI trong nhận dạng hình ảnh.
+    </div>
+
+    <p style="font-size: 0.8rem; text-align: center; color: #68778d; margin-top: 1.5rem;">
+        📅 Hoàn thành: 14/03/2026 | Môn: Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo | MSSV: 25022799
+    </p>
+</div>
+
+</body>
+</html>

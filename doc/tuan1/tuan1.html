@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Quản lý tệp và thư mục trên Windows 11</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            padding: 2rem;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #0f0f0f;
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a2a2a;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: #60a5fa;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #38bdf8;
+            margin: 1.5rem 0 0.8rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #2d2d2d;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: #facc15;
+            margin: 1.2rem 0 0.8rem 0;
+        }
+
+        .badge {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            border: 1px solid #334155;
+        }
+
+        .step-card {
+            background: #141414;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            border-color: #3b82f6;
+            background: #1a1a1a;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #3b82f6;
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        code {
+            background: #1a1a1a;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #facc15;
+            border: 1px solid #2d2d2d;
+        }
+
+        .screenshot {
+            margin: 1rem 0 0.5rem 0;
+            text-align: center;
+            background: #0a0a0a;
+            padding: 0.8rem;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .screenshot-caption {
+            font-size: 0.7rem;
+            color: #68778d;
+            margin-top: 0.4rem;
+            font-style: italic;
+        }
+
+        .warning {
+            background: #2d1f00;
+            border-left: 4px solid #facc15;
+            padding: 0.6rem 1rem;
+            margin: 0.8rem 0;
+            border-radius: 8px;
+            color: #fde68a;
+            font-size: 0.85rem;
+        }
+
+        .check {
+            color: #34d399;
+            font-weight: bold;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #2d2d2d;
+            margin: 1.5rem 0;
+        }
+
+        .summary-box {
+            background: #1a1a1a;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            border: 1px solid #2d2d2d;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 1rem; }
+            .container { padding: 1.2rem; }
+            h1 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="badge">🪟 WINDOWS 11 · THỰC HÀNH QUẢN LÝ TỆP VÀ THƯ MỤC</div>
+
+    <h1>NHIỆM VỤ 01 - MỤC 1.4</h1>
+    <h2>📂 Quản lý tệp và thư mục</h2>
+    <p>Hướng dẫn thực hành chi tiết trên <strong style="color: #60a5fa;">Hệ điều hành Windows 11</strong></p>
+
+    <hr>
+
+    <h3>🎯 Mục tiêu & Tóm tắt</h3>
+    <p>Rèn luyện kỹ năng <strong>tạo, đổi tên, sao chép, di chuyển, xóa, khôi phục</strong> tệp tin và thư mục trên <strong>Windows 11</strong>.</p>
+
+    <!-- Bước 1 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">1</span> Mở File Explorer</div>
+        <p>Nhấn tổ hợp phím <strong>Windows + E</strong> hoặc nhấp vào biểu tượng thư mục trên thanh tác vụ.</p>
+        <div class="screenshot">
+            <img src="images/image1.png" alt="Mở File Explorer">
+            <div class="screenshot-caption">Hình 1: Mở File Explorer</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image2.png" alt="Giao diện File Explorer">
+            <div class="screenshot-caption">Hình 2: Giao diện sau khi mở File Explorer</div>
+        </div>
+    </div>
+
+    <!-- Bước 2 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">2</span> Truy cập ổ đĩa / thư mục</div>
+        <p>Ở cột bên trái, nhấp vào <strong>This PC</strong>, sau đó nhấp đúp vào ổ <strong>D:</strong> hoặc <strong>E:</strong> (hoặc vào thư mục <strong>Documents</strong>).</p>
+        <div class="screenshot">
+            <img src="images/image3.png" alt="Chọn ổ D">
+            <div class="screenshot-caption">Hình 3: Chọn ổ D trong This PC</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image4.png" alt="Bên trong Documents">
+            <div class="screenshot-caption">Hình 4: Bên trong thư mục Documents</div>
+        </div>
+    </div>
+
+    <!-- Bước 3 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">3</span> Tạo thư mục mới</div>
+        <p>Nhấp chuột phải → <strong>New → Folder</strong>. Đặt tên <code>ThucHanh_NguyenQuocCuong</code> → Enter.</p>
+        <div class="screenshot">
+            <img src="images/image5.png" alt="Tạo thư mục">
+            <div class="screenshot-caption">Hình 5: Chọn New → Folder</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image6.png" alt="Đặt tên thư mục">
+            <div class="screenshot-caption">Hình 6: Đặt tên thư mục</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image7.png" alt="Thư mục đã tạo">
+            <div class="screenshot-caption">Hình 7: Thư mục đã tạo thành công</div>
+        </div>
+    </div>
+
+    <!-- Bước 4 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">4</span> Vào thư mục vừa tạo</div>
+        <p>Nhấp đúp vào thư mục <code>ThucHanh_NguyenQuocCuong</code>.</p>
+        <div class="screenshot">
+            <img src="images/image8.png" alt="Vào thư mục">
+            <div class="screenshot-caption">Hình 8: Bên trong thư mục</div>
+        </div>
+    </div>
+
+    <!-- Bước 5 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">5</span> Tạo tệp tin văn bản</div>
+        <p>Nhấp chuột phải → <strong>New → Text Document</strong>. Đặt tên <code>GhiChu.txt</code> → Enter.</p>
+        <div class="screenshot">
+            <img src="images/image9.png" alt="Tạo file text">
+            <div class="screenshot-caption">Hình 9: Tạo file text</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image10.png" alt="File đã tạo">
+            <div class="screenshot-caption">Hình 10: File GhiChu.txt đã tạo</div>
+        </div>
+    </div>
+
+    <!-- Bước 6 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">6</span> Đổi tên tệp tin</div>
+        <p>Chuột phải vào <code>GhiChu.txt</code> → <strong>Rename</strong> → Đổi thành <code>GhiChuQuanTrong.txt</code> → Enter.</p>
+        <div class="screenshot">
+            <img src="images/image11.png" alt="Đổi tên">
+            <div class="screenshot-caption">Hình 11: Chọn Rename</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image12.png" alt="Đã đổi tên">
+            <div class="screenshot-caption">Hình 12: File đã đổi tên</div>
+        </div>
+    </div>
+
+    <!-- Bước 7 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">7</span> Tạo thư mục con</div>
+        <p>Chuột phải → <strong>New → Folder</strong> → Đặt tên <code>TaiLieu</code>.</p>
+        <div class="screenshot">
+            <img src="images/image13.png" alt="Tạo thư mục con">
+            <div class="screenshot-caption">Hình 13: Chọn New → Folder</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image14.png" alt="Đặt tên thư mục con">
+            <div class="screenshot-caption">Hình 14: Đặt tên TaiLieu</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image15.png" alt="Thư mục con đã tạo">
+            <div class="screenshot-caption">Hình 15: Thư mục TaiLieu đã tạo</div>
+        </div>
+    </div>
+
+    <!-- Bước 8 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">8</span> Sao chép tệp tin (Copy &amp; Paste)</div>
+        <p>Copy <code>GhiChuQuanTrong.txt</code> (<code>Ctrl + C</code>) → vào <code>TaiLieu</code> → Paste (<code>Ctrl + V</code>).</p>
+        <div class="screenshot">
+            <img src="images/image16.png" alt="Mở TaiLieu">
+            <div class="screenshot-caption">Hình 16: Mở thư mục TaiLieu</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image17.png" alt="Chọn Paste">
+            <div class="screenshot-caption">Hình 17: Chọn Paste</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image18.png" alt="Đã sao chép">
+            <div class="screenshot-caption">Hình 18: File đã sao chép thành công</div>
+        </div>
+    </div>
+
+    <!-- Bước 9 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">9</span> Di chuyển tệp tin (Cut &amp; Paste)</div>
+        <p>Tạo file <code>DiChuyen.txt</code> → Cut (<code>Ctrl + X</code>) → vào <code>TaiLieu</code> → Paste (<code>Ctrl + V</code>).</p>
+        <div class="screenshot">
+            <img src="images/image19.png" alt="Tạo file DiChuyen">
+            <div class="screenshot-caption">Hình 19: Tạo file DiChuyen.txt</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image20.png" alt="Chọn Cut">
+            <div class="screenshot-caption">Hình 20: Chọn Cut</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image21.png" alt="Đã di chuyển">
+            <div class="screenshot-caption">Hình 21: File đã di chuyển sang TaiLieu</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image22.png" alt="Biến mất khỏi thư mục gốc">
+            <div class="screenshot-caption">Hình 22: File biến mất khỏi thư mục gốc</div>
+        </div>
+    </div>
+
+    <!-- Bước 10 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">10</span> Xóa tệp tin (vào Recycle Bin)</div>
+        <p>Chuột phải vào <code>GhiChuQuanTrong.txt</code> → <strong>Delete</strong> → vào thùng rác.</p>
+        <div class="screenshot">
+            <img src="images/image23.png" alt="Xóa file">
+            <div class="screenshot-caption">Hình 23: Chọn Delete</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image24.png" alt="Vào Recycle Bin">
+            <div class="screenshot-caption">Hình 24: File đã vào Recycle Bin</div>
+        </div>
+    </div>
+
+    <!-- Bước 11 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">11</span> Xóa vĩnh viễn</div>
+        <p>Chọn <code>DiChuyen.txt</code> → nhấn <strong>Shift + Delete</strong> → xóa vĩnh viễn.</p>
+        <div class="warning">⚠️ <strong>Lưu ý:</strong> Xóa bằng Shift+Delete sẽ không thể khôi phục!</div>
+        <div class="screenshot">
+            <img src="images/image25.png" alt="Cảnh báo xóa">
+            <div class="screenshot-caption">Hình 25: Cảnh báo xóa vĩnh viễn</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/image26.png" alt="Đã xóa vĩnh viễn">
+            <div class="screenshot-caption">Hình 26: File đã bị xóa vĩnh viễn</div>
+        </div>
+    </div>
+
+    <!-- Bước 12 -->
+    <div class="step-card">
+        <div class="step-title"><span class="step-number">12</span> Khôi phục từ Thùng rác</div>
+        <p>Mở <strong>Recycle Bin</strong> → chuột phải vào file → <strong>Restore</strong>.</p>
+        <div class="screenshot">
+            <img src="images/image27.png" alt="Khôi phục">
+            <div class="screenshot-caption">Hình 27: Chọn Restore để khôi phục</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="summary-box">
+        <h3>📌 Tổng kết các thao tác đã thực hành</h3>
+        <ul>
+            <li><span class="check">✓</span> Mở File Explorer</li>
+            <li><span class="check">✓</span> Tạo thư mục, tạo file</li>
+            <li><span class="check">✓</span> Đổi tên, Copy, Cut, Paste</li>
+            <li><span class="check">✓</span> Xóa vào Recycle Bin</li>
+            <li><span class="check">✓</span> Xóa vĩnh viễn (Shift+Delete)</li>
+            <li><span class="check">✓</span> Khôi phục từ Recycle Bin</li>
+        </ul>
+        <div class="warning" style="background: #0f2f1f; border-left-color: #34d399;">
+            ✅ <strong>Kết quả:</strong> Đã thành thạo quản lý tệp và thư mục trên Windows 11.
+        </div>
+    </div>
+
+    <hr>
+    <p style="font-size: 0.8rem; text-align: center; color: #68778d;">
+        | Hệ điều hành: Windows 11 | MSSV: 25022799
+    </p>
+</div>
+
+</body>
+</html>

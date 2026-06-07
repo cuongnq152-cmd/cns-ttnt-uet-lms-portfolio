@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 - Viết Prompt hiệu quả cho các tác vụ học tập</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            padding: 2rem;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #0f0f0f;
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a2a2a;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: #60a5fa;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #38bdf8;
+            margin: 1.8rem 0 0.8rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #2d2d2d;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: #facc15;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+
+        .badge {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            border: 1px solid #334155;
+        }
+
+        .info-block {
+            background: #141414;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        .prompt-box {
+            background: #0a0a0a;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            white-space: pre-wrap;
+        }
+
+        .prompt-title {
+            color: #60a5fa;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+
+        th, td {
+            border: 1px solid #2d2d2d;
+            padding: 0.6rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a1a1a;
+            color: #facc15;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #1a1a1a;
+        }
+
+        .good {
+            color: #34d399;
+        }
+        .bad {
+            color: #f87171;
+        }
+
+        ul, ol {
+            margin: 0.5rem 0 1rem 1.8rem;
+        }
+
+        li {
+            margin: 0.3rem 0;
+        }
+
+        .screenshot {
+            margin: 1rem 0;
+            text-align: center;
+            background: #0a0a0a;
+            padding: 0.8rem;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .screenshot-caption {
+            font-size: 0.7rem;
+            color: #68778d;
+            margin-top: 0.4rem;
+            font-style: italic;
+        }
+
+        .principle {
+            background: #1a1a1a;
+            border-left: 4px solid #facc15;
+            padding: 0.8rem 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .principle-title {
+            color: #facc15;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #2d2d2d;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .container { padding: 1.2rem; }
+            table { font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="badge">✍️ BÀI 3 · VIẾT PROMPT HIỆU QUẢ CHO CÁC TÁC VỤ HỌC TẬP</div>
+
+    <h1>BÁO CÁO BÀI TẬP</h1>
+    <h2>Phát triển kỹ năng viết prompt hiệu quả để tận dụng tối đa khả năng của các mô hình ngôn ngữ lớn trong học tập</h2>
+
+    <div class="info-block">
+        <p><strong>Họ và tên:</strong> Nguyễn Quốc Cường</p>
+        <p><strong>Lớp:</strong> K70A — AI4</p>
+        <p><strong>Mã sinh viên:</strong> 25022799</p>
+    </div>
+
+    <hr>
+
+    <!-- ========== I. LỰA CHỌN TÁC VỤ ========== -->
+    <h2>I. Lựa chọn và phân tích tác vụ học tập</h2>
+    <p><strong>Cơ sở lựa chọn:</strong> Ba tác vụ được chọn dựa trên tính phổ biến trong môi trường học thuật luật học, thể hiện ba cấp độ tư duy khác nhau: tái hiện thông tin (tóm tắt), hiểu sâu bản chất (giải thích khái niệm), và vận dụng tổng hợp (tạo câu hỏi ôn tập).</p>
+    
+    <table>
+        <thead>
+            <tr><th>Tác vụ</th><th>Bản chất</th><th>Yêu cầu cốt lõi</th><th>Thách thức khi viết prompt</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>1. Tóm tắt tài liệu</strong></td>
+                <td>Xử lý nội dung, chọn lọc thông tin</td>
+                <td>Xác định đúng trọng tâm, loại bỏ chi tiết thừa</td>
+                <td>AI dễ bị "liệt kê" toàn bộ thay vì chọn lọc; khó làm nổi bật điểm đột phá</td>
+            </tr>
+            <tr>
+                <td><strong>2. Giải thích khái niệm phức tạp</strong></td>
+                <td>Phân tích, so sánh, làm rõ</td>
+                <td>Làm sáng tỏ ranh giới giữa các khái niệm dễ nhầm lẫn</td>
+                <td>Khái niệm mang tính trừu tượng; AI dễ sa vào định nghĩa sách vở mà thiếu tính ứng dụng</td>
+            </tr>
+            <tr>
+                <td><strong>3. Tạo bộ câu hỏi ôn tập</strong></td>
+                <td>Thiết kế đánh giá, vận dụng kiến thức</td>
+                <td>Kiểm tra được các cấp độ nhận thức (nhớ - hiểu - vận dụng)</td>
+                <td>Dễ tạo ra câu hỏi học thuộc lòng, khó thiết kế được câu hỏi "gài bẫy" hoặc tình huống phức tạp</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ========== II. CÁC PHIÊN BẢN PROMPT ========== -->
+    <h2>II. Xây dựng các phiên bản prompt</h2>
+
+    <!-- TÁC VỤ 1 -->
+    <h3>Tác vụ 1: Tóm tắt Nghị quyết 80/NQ-TW về phát triển văn hóa Việt Nam</h3>
+
+    <div class="prompt-box">
+        <div class="prompt-title">📝 a) Prompt cơ bản</div>
+        <code>Tóm tắt Nghị quyết 80/NQ-TW.</code>
+    </div>
+
+    <div class="prompt-box">
+        <div class="prompt-title">🚀 b) Prompt cải tiến</div>
+        <code>Tóm tắt Nghị quyết 80/NQ-TW của Bộ Chính trị về phát triển văn hóa Việt Nam. Yêu cầu tóm tắt dưới dạng gạch đầu dòng, tập trung vào 3-4 điểm mới và quan trọng nhất mà Nghị quyết này giải quyết (ví dụ: quan điểm chỉ đạo, mục tiêu đến 2030, các nhiệm vụ đột phá). Mục tiêu là nắm bắt nhanh các điểm mấu chốt.</code>
+    </div>
+
+    <div class="prompt-box">
+        <div class="prompt-title">🎯 c) Prompt nâng cao</div>
+        <code>[VAI TRÒ] Bạn là chuyên gia nghiên cứu chính sách văn hóa, được giao chuẩn bị bản tóm tắt phân tích Nghị quyết 80/NQ-TW cho lãnh đạo bộ ngành.
+
+[BỐI CẢNH] Vị lãnh đạo cần hiểu nhanh các vướng mắc thực tiễn mà Nghị quyết giải quyết và điểm đột phá cần tập trung chỉ đạo.
+
+[QUY TRÌNH THỰC HIỆN]
+1. Mở đầu: 1 câu nêu bối cảnh và mục đích ban hành.
+2. Xác định và phân tích 3-4 vấn đề "nút thắt" nhất trước khi có Nghị quyết.
+3. Với mỗi vấn đề, cấu trúc: Vấn đề thực tiễn (trước đây vướng mắc gì?) – Giải pháp của Nghị quyết 80 (điểm đột phá ra sao?).
+4. Kết luận: 1-2 lưu ý quan trọng về lộ trình thực hiện.
+
+[YÊU CẦU] KHÔNG liệt kê toàn bộ Nghị quyết. Tập trung phân tích "điểm nghẽn được tháo gỡ". Ngôn ngữ chính xác, sắc sảo, mang tính chiến lược.</code>
+    </div>
+
+    <!-- TÁC VỤ 2 -->
+    <h3>Tác vụ 2: Giải thích khái niệm "công nghiệp văn hóa" trong Nghị quyết 80/NQ-TW</h3>
+
+    <div class="prompt-box">
+        <div class="prompt-title">📝 a) Prompt cơ bản</div>
+        <code>Giải thích khái niệm "công nghiệp văn hóa" trong Nghị quyết 80/NQ-TW.</code>
+    </div>
+
+    <div class="prompt-box">
+        <div class="prompt-title">🚀 b) Prompt cải tiến</div>
+        <code>Hãy giải thích khái niệm "công nghiệp văn hóa" theo Nghị quyết 80/NQ-TW.
+
+Yêu cầu:
+1. Định nghĩa khái niệm.
+2. Liệt kê các ngành công nghiệp văn hóa trọng tâm.
+3. Giải thích vì sao công nghiệp văn hóa được coi là "đột phá chiến lược".</code>
+    </div>
+
+    <div class="prompt-box">
+        <div class="prompt-title">🎯 c) Prompt nâng cao</div>
+        <code>[VAI TRÒ] Bạn là giảng viên đại học chuyên ngành Quản lý văn hóa, nổi tiếng với khả năng giải thích các khái niệm chính sách phức tạp một cách dễ hiểu.
+
+[ĐỐI TƯỢNG] Tôi là sinh viên năm 2, đang bối rối vì khái niệm "công nghiệp văn hóa" dễ bị nhầm lẫn với "văn hóa đại chúng" hay "giải trí đơn thuần".
+
+[YÊU CẦU]
+1. Giải thích điểm mấu chốt để phân biệt "công nghiệp văn hóa" với "văn hóa đại chúng". Tập trung vào bản chất kinh tế - sáng tạo: kết hợp sáng tạo nghệ thuật với sản xuất, phân phối, thương mại hóa có bảo vệ bản quyền.
+2. Lấy 2 ví dụ cụ thể từ các ngành được Nghị quyết 80 xác định (điện ảnh, thời trang, thiết kế) để minh họa.
+3. Tạo một "bài kiểm tra nhanh" (litmus test) gồm 1 câu hỏi tình huống để người học tự kiểm tra.</code>
+    </div>
+
+    <!-- TÁC VỤ 3 -->
+    <h3>Tác vụ 3: Tạo bộ câu hỏi ôn tập về Nghị quyết 80/NQ-TW</h3>
+
+    <div class="prompt-box">
+        <div class="prompt-title">📝 a) Prompt cơ bản</div>
+        <code>Cho tôi vài câu hỏi ôn tập về Nghị quyết 80/NQ-TW.</code>
+    </div>
+
+    <div class="prompt-box">
+        <div class="prompt-title">🚀 b) Prompt cải tiến</div>
+        <code>Tạo 10 câu hỏi ôn tập về Nghị quyết 80/NQ-TW (về phát triển văn hóa Việt Nam).
+
+Yêu cầu cấu trúc:
+• 5 câu hỏi lý thuyết (Trình bày, phân tích...)
+• 5 câu hỏi nhận định Đúng/Sai (có yêu cầu giải thích)
+
+Phạm vi: Quan điểm chỉ đạo, mục tiêu đến 2030, các nhiệm vụ đột phá về thể chế, nguồn lực và công nghiệp văn hóa.</code>
+    </div>
+
+    <div class="prompt-box">
+        <div class="prompt-title">🎯 c) Prompt nâng cao</div>
+        <code>[VAI TRÒ] Bạn là giảng viên bộ môn Quản lý nhà nước về văn hóa, cần chuẩn bị câu hỏi kiểm tra sinh viên trước kỳ thi.
+
+[CHỦ ĐỀ] Nghị quyết 80/NQ-TW về phát triển văn hóa Việt Nam.
+
+[QUY TRÌNH THỰC HIỆN] Hãy tạo 3 loại câu hỏi:
+1. Câu hỏi Lý thuyết Phân biệt (2 câu): Tập trung vào các khái niệm dễ nhầm lẫn.
+2. Câu hỏi Nhận định 'Gài bẫy' (5 câu): Các nhận định "có vẻ đúng nhưng sai" hoặc "có vẻ sai nhưng đúng".
+3. Bài tập Tình huống Phức tạp (1 câu): Tình huống địa phương muốn phát triển công nghiệp văn hóa từ di sản.
+
+[YÊU CẦU CHUNG] Kiểm tra khả năng áp dụng Nghị quyết vào thực tiễn, không phải học thuộc lòng.</code>
+    </div>
+
+    <!-- ========== III. THỬ NGHIỆM VÀ SO SÁNH ========== -->
+    <h2>III. Thử nghiệm và so sánh kết quả</h2>
+    <p><em>Ghi chú: Dưới đây là kết quả mô phỏng từ quá trình thử nghiệm thực tế với công cụ AI. Ảnh chụp màn hình được đính kèm dưới đây.</em></p>
+
+    <!-- 3 ẢNH (cơ bản, cải tiến, nâng cao) -->
+    <div class="screenshot">
+        <img src="images/image1.png" alt="Kết quả Prompt cơ bản" onerror="this.style.display='none'">
+        <div class="screenshot-caption">Hình 1: Kết quả từ Prompt cơ bản (tóm tắt Nghị quyết 80)</div>
+    </div>
+
+    <div class="screenshot">
+        <img src="images/image2.png" alt="Kết quả Prompt cải tiến" onerror="this.style.display='none'">
+        <div class="screenshot-caption">Hình 2: Kết quả từ Prompt cải tiến (tóm tắt có cấu trúc)</div>
+    </div>
+
+    <div class="screenshot">
+        <img src="images/image3.png" alt="Kết quả Prompt nâng cao" onerror="this.style.display='none'">
+        <div class="screenshot-caption">Hình 3: Kết quả từ Prompt nâng cao (phân tích điểm nghẽn)</div>
+    </div>
+
+    <h3>Bảng so sánh tổng quan ba tác vụ</h3>
+    <table>
+        <thead>
+            <tr><th>Tiêu chí</th><th>Prompt Cơ bản</th><th>Prompt Cải tiến</th><th>Prompt Nâng cao</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Định dạng đầu ra</td><td>Đoạn văn liệt kê, thiếu cấu trúc</td><td>Gạch đầu dòng, có cấu trúc rõ ràng</td><td>Phân tích theo cặp vấn đề – giải pháp</td></tr>
+            <tr><td>Mức độ chọn lọc</td><td>Liệt kê toàn bộ nội dung</td><td>Chọn lọc 3-4 điểm trọng tâm</td><td>Chỉ tập trung vào điểm nghẽn và giải pháp</td></tr>
+            <tr><td>Khả năng ứng dụng</td><td>Người dùng phải tự phân tích</td><td>Người dùng nắm được trọng tâm</td><td>Đã có sẵn khung phân tích để hành động</td></tr>
+            <tr><td>Độ sâu tư duy</td><td>Tái hiện thông tin</td><td>Tổ chức thông tin</td><td>Phân tích, suy luận, định hướng</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Phân tích chi tiết từng tác vụ</h3>
+
+    <h4>Tác vụ 1 – Tóm tắt Nghị quyết</h4>
+    <table>
+        <thead><tr><th>Phiên bản</th><th>Kết quả đặc trưng</th><th>Điểm mạnh</th><th>Hạn chế</th></tr></thead>
+        <tbody>
+            <tr><td>Cơ bản</td><td>Liệt kê 5-7 nội dung: "Nghị quyết gồm I. Quan điểm, II. Mục tiêu..."</td><td>Cung cấp đủ các phần chính</td><td>Không làm nổi bật điểm đột phá</td></tr>
+            <tr><td>Cải tiến</td><td>4 gạch đầu dòng: quan điểm "văn hóa ngang tầm", mục tiêu 2% ngân sách...</td><td>Chọn lọc trọng tâm; dễ nắm bắt nhanh</td><td>Chưa giải thích ý nghĩa thực tiễn</td></tr>
+            <tr><td>Nâng cao</td><td>Phân tích 4 vấn đề nút thắt – mỗi vấn đề có cặp "vướng mắc/giải pháp"</td><td>Hiểu được tại sao Nghị quyết ra đời</td><td>Yêu cầu người dùng có kiến thức nền</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Tác vụ 2 – Giải thích khái niệm "công nghiệp văn hóa"</h4>
+    <table>
+        <thead><tr><th>Phiên bản</th><th>Kết quả đặc trưng</th><th>Điểm mạnh</th><th>Hạn chế</th></tr></thead>
+        <tbody>
+            <tr><td>Cơ bản</td><td>Định nghĩa chung: "Công nghiệp văn hóa là ngành kinh tế dựa trên sáng tạo..."</td><td>Cung cấp định nghĩa chuẩn</td><td>Không phân biệt được với khái niệm tương tự</td></tr>
+            <tr><td>Cải tiến</td><td>Định nghĩa + danh sách 8 ngành + lý do đột phá</td><td>Có cấu trúc rõ ràng</td><td>Vẫn mang tính liệt kê</td></tr>
+            <tr><td>Nâng cao</td><td>Điểm mấu chốt phân biệt + 2 ví dụ + bài kiểm tra nhanh</td><td>Giải quyết trực tiếp "nỗi đau" của sinh viên</td><td>Ví dụ cần cập nhật sát thực tế</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Tác vụ 3 – Tạo bộ câu hỏi ôn tập</h4>
+    </table>
+        <thead><tr><th>Phiên bản</th><th>Kết quả đặc trưng</th><th>Điểm mạnh</th><th>Hạn chế</th></tr></thead>
+        <tbody>
+            <tr><td>Cơ bản</td><td>5-7 câu hỏi dạng "Trình bày quan điểm...", "Nêu mục tiêu..."</td><td>Dễ tạo, phù hợp ôn nhanh</td><td>Câu hỏi ở mức độ nhớ</td></tr>
+            <tr><td>Cải tiến</td><td>10 câu đúng cấu trúc: 5 lý thuyết + 5 đúng/sai</td><td>Đa dạng dạng câu hỏi</td><td>Câu hỏi "gài bẫy" chưa sắc sảo</td></tr>
+            <tr><td>Nâng cao</td><td>2 câu phân biệt + 5 câu gài bẫy + 1 tình huống phức tạp</td><td>Kiểm tra được cả 3 cấp độ nhận thức</td><td>Cần thời gian để trả lời</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ========== IV. PHÂN TÍCH HIỆU QUẢ ========== -->
+    <h2>IV. Phân tích hiệu quả prompt</h2>
+
+    <h3>1. Prompt cơ bản: Gánh nặng diễn giải đặt lên mô hình</h3>
+    <p><strong>Cơ chế:</strong> Khi prompt thiếu ràng buộc, không gian giải pháp là cực kỳ lớn. Mô hình sẽ hội tụ về câu trả lời có xác suất thống kê cao nhất dựa trên toàn bộ dữ liệu huấn luyện.</p>
+    <p><strong>Hậu quả:</strong> Câu trả lời mang tính <span class="bad">"mẫu số chung"</span> – đúng nhưng chung chung, không có điểm nhấn, không phản ánh mục tiêu cụ thể của người dùng.</p>
+
+    <h3>2. Prompt cải tiến: Tổ chức thông tin, thu hẹp không gian</h3>
+    <p><strong>Cơ chế:</strong> Bằng cách thêm cấu trúc (gạch đầu dòng, số lượng điểm, phạm vi cụ thể), người dùng thu hẹp không gian dự đoán, buộc AI phải <span class="good">chọn lọc thay vì liệt kê</span>.</p>
+    <p><strong>Hiệu quả:</strong> Kết quả có tổ chức, dễ đọc, dễ nắm bắt trọng tâm.</p>
+
+    <h3>3. Prompt nâng cao: Điều khiển quy trình tư duy</h3>
+    <p>Prompt nâng cao hiệu quả vì kết hợp <strong>4 kỹ thuật thu hẹp không gian dự đoán</strong>:</p>
+    <table>
+        <thead><tr><th>Kỹ thuật</th><th>Vai trò</th><th>Ví dụ trong bài</th></tr></thead>
+        <tbody>
+            <tr><td>Vai trò (Role)</td><td>Áp "bộ lọc" tri thức và văn phong chuyên biệt</td><td>"Bạn là chuyên gia nghiên cứu chính sách văn hóa"</td></tr>
+            <tr><td>Bối cảnh (Context)</td><td>Ràng buộc phạm vi và mục tiêu</td><td>"Cho lãnh đạo bộ ngành cần hiểu vướng mắc thực tiễn"</td></tr>
+            <tr><td>Quy trình (Chain of Thought)</td><td>Ép AI suy luận tuần tự</td><td>Quy trình 4 bước: bối cảnh → xác định vấn đề → phân tích → kết luận</td></tr>
+            <tr><td>Mẫu (Few-Shot)</td><td>Cung cấp khuôn mẫu về định dạng và chất lượng</td><td>Ví dụ mẫu câu hỏi "gài bẫy" về chỉ tiêu 2% ngân sách</td></tr>
+        </tbody>
+    </table>
+    <p><strong>Điểm khác biệt cốt lõi:</strong> Prompt nâng cao không chỉ hỏi <em>"cái gì"</em> mà còn chỉ dẫn <em>"làm thế nào"</em> để AI suy nghĩ. Kết quả không chỉ là thông tin, mà là <span class="good">khung phân tích</span> mà người dùng có thể áp dụng.</p>
+
+    <!-- ========== V. NGUYÊN TẮC VIẾT PROMPT ========== -->
+    <h2>V. Tổng hợp các nguyên tắc và mẹo viết prompt hiệu quả</h2>
+
+    <div class="principle">
+        <div class="principle-title">1. Nguyên tắc "Từ mơ hồ đến có cấu trúc"</div>
+        <p><strong>Mẹo:</strong> Đừng chỉ hỏi "Hãy làm X". Hãy quy định rõ định dạng đầu ra (gạch đầu dòng, bảng, số lượng điểm), phạm vi, và mục tiêu.</p>
+        <p><span class="bad">❌ Kém:</span> "Tóm tắt Nghị quyết 80."</p>
+        <p><span class="good">✅ Tốt:</span> "Tóm tắt dưới dạng gạch đầu dòng, tập trung 3-4 điểm mới nhất."</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-title">2. Nguyên tắc "Xác định vai trò và đối tượng"</div>
+        <p><strong>Mẹo:</strong> Gán cho AI một vai trò cụ thể (chuyên gia, giảng viên) và xác định rõ đối tượng tiếp nhận.</p>
+        <p><span class="bad">❌ Kém:</span> "Giải thích công nghiệp văn hóa."</p>
+        <p><span class="good">✅ Tốt:</span> "Bạn là giảng viên đại học, giải thích cho sinh viên năm 2 đang bối rối."</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-title">3. Nguyên tắc "Ra lệnh quy trình, không chỉ sản phẩm"</div>
+        <p><strong>Mẹo:</strong> Chia nhiệm vụ lớn thành các bước nhỏ, yêu cầu AI thực hiện tuần tự.</p>
+        <p><span class="bad">❌ Kém:</span> "Tạo bộ câu hỏi ôn tập."</p>
+        <p><span class="good">✅ Tốt:</span> "1. Tạo 2 câu phân biệt khái niệm. 2. Tạo 5 câu 'gài bẫy'. 3. Tạo 1 tình huống phức tạp."</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-title">4. Nguyên tắc "Cung cấp mẫu (few-shot) để AI bắt chước"</div>
+        <p><strong>Mẹo:</strong> Cung cấp ví dụ mẫu về định dạng, độ dài, hoặc mức độ khó mà bạn mong muốn.</p>
+        <p><span class="bad">❌ Kém:</span> "Tạo câu hỏi đúng/sai."</p>
+        <p><span class="good">✅ Tốt:</span> "Ví dụ mẫu: 'Nghị quyết 80 quy định chỉ 1% ngân sách.' → Sai, vì yêu cầu tối thiểu 2%."</p>
+    </div>
+
+    <h3>Tổng kết: Sự dịch chuyển tư duy</h3>
+    <table>
+        <thead><tr><th>Từ</th><th>Sang</th></tr></thead>
+        <tbody>
+            <tr><td>Người hỏi mơ hồ</td><td>Kiến trúc sư thiết kế yêu cầu</td></tr>
+            <tr><td>Yêu cầu sản phẩm</td><td>Điều khiển quy trình tư duy</td></tr>
+            <tr><td>Nhận thông tin</td><td>Định hướng phân tích và hành động</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <div class="info-block" style="background: #0f2f1f; border-left: 4px solid #34d399;">
+        ✅ <strong>Kết luận:</strong> Kỹ năng viết prompt hiệu quả không phải là viết dài hơn, mà là viết đủ thông tin chỉ dẫn để thu hẹp không gian dự đoán của AI, giúp nó trả về kết quả đúng với mục tiêu của người dùng.
+    </div>
+
+    <p style="font-size: 0.8rem; text-align: center; color: #68778d; margin-top: 1.5rem;">
+ Môn: Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo | MSSV: 25022799
+    </p>
+</div>
+
+</body>
+</html>

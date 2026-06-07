@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6 - Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            padding: 2rem;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #0f0f0f;
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a2a2a;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: #60a5fa;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #38bdf8;
+            margin: 1.8rem 0 0.8rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #2d2d2d;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: #facc15;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+
+        .badge {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            border: 1px solid #334155;
+        }
+
+        .info-block {
+            background: #141414;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        .prompt-box {
+            background: #0a0a0a;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            white-space: pre-wrap;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+
+        th, td {
+            border: 1px solid #2d2d2d;
+            padding: 0.6rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a1a1a;
+            color: #facc15;
+            font-weight: 600;
+        }
+
+        .screenshot {
+            margin: 1.5rem 0;
+            text-align: center;
+            background: #0a0a0a;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .screenshot-caption {
+            font-size: 0.7rem;
+            color: #68778d;
+            margin-top: 0.4rem;
+            font-style: italic;
+        }
+
+        .principle {
+            background: #1a1a1a;
+            border-left: 4px solid #facc15;
+            padding: 0.8rem 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+
+        .principle-num {
+            color: #facc15;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        ul, ol {
+            margin: 0.5rem 0 1rem 1.8rem;
+        }
+
+        li {
+            margin: 0.3rem 0;
+        }
+
+        .good {
+            color: #34d399;
+        }
+        .bad {
+            color: #f87171;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #2d2d2d;
+            margin: 1.5rem 0;
+        }
+
+        .commitment {
+            background: #0f2f1f;
+            border-left: 4px solid #34d399;
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .container { padding: 1.2rem; }
+            table { font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="badge">⚖️ BÀI 6 · SỬ DỤNG AI CÓ TRÁCH NHIỆM TRONG HỌC TẬP VÀ NGHIÊN CỨU</div>
+
+    <h1>BÁO CÁO BÀI TẬP</h1>
+    <h2>Sử dụng AI có trách nhiệm và đạo đức trong học tập và nghiên cứu</h2>
+
+    <div class="info-block">
+        <p><strong>Họ và tên:</strong> Nguyễn Quốc Cường</p>
+        <p><strong>Lớp:</strong> K70A — AI4</p>
+        <p><strong>Mã sinh viên:</strong> 25022799</p>
+    </div>
+
+    <hr>
+
+    <!-- ========== I. CHÍNH SÁCH CỦA TRƯỜNG ========== -->
+    <h2>I. Nghiên cứu chính sách của trường đại học về việc sử dụng AI</h2>
+
+    <h3>1.1. Chính sách của Đại học Quốc gia Hà Nội</h3>
+    <p>Theo Quyết định số 3499/QĐ-ĐHQGHN ngày 7/7/2025, ĐHQGHN đã chính thức đưa học phần <strong>"Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo"</strong> vào giảng dạy bắt buộc cho toàn bộ sinh viên đại học chính quy từ khóa 2025.</p>
+    
+    <table>
+        <thead><tr><th>Nội dung</th><th>Quy định cụ thể</th></tr></thead>
+        <tbody>
+            <tr><td>Tên học phần</td><td>Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo</td></tr>
+            <tr><td>Số tín chỉ</td><td>3 tín chỉ (45 giờ)</td></tr>
+            <tr><td>Hình thức</td><td>Trực tuyến 100%</td></tr>
+            <tr><td>Tính chất</td><td>Bắt buộc với mọi sinh viên hệ chính quy</td></tr>
+        </tbody>
+    </table>
+    <p>Điểm đáng chú ý là học phần được thiết kế để trang bị cho sinh viên <strong>nhận thức về đạo đức, liêm chính học thuật, an toàn số và trách nhiệm</strong> khi ứng dụng AI trong môi trường học thuật.</p>
+
+    <h3>1.2. Chính sách của một số trường khác</h3>
+    <p><strong>Đại học Kinh tế Quốc dân (NEU):</strong> Cho phép sinh viên sử dụng AI, ChatGPT, không ngăn cấm. GS.TS Phạm Hồng Chương nhấn mạnh sinh viên phải "làm chủ công nghệ, làm chủ quy trình".</p>
+    <p><strong>Trường Đại học Luật Hà Nội:</strong> Đã tổ chức hội nghị chuyên đề, thống nhất 4 nguyên tắc cốt lõi: trách nhiệm học thuật thuộc về con người; minh bạch khi dùng AI; kiểm chứng thông tin; không khai báo AI là vi phạm liêm chính học thuật.</p>
+
+    <h3>1.3. So sánh và nhận định</h3>
+    <table>
+        <thead><tr><th>Tiêu chí</th><th>ĐHQGHN</th><th>NEU</th><th>Trường ĐH Luật HN</th></tr></thead>
+        <tbody>
+            <tr><td>Hình thức</td><td>Bắt buộc học AI từ năm nhất</td><td>Cho phép sử dụng, không cấm</td><td>Có hội thảo chuyên đề</td></tr>
+            <tr><td>Trọng tâm</td><td>Kỹ năng + đạo đức</td><td>Làm chủ công nghệ</td><td>Liêm chính học thuật</td></tr>
+            <tr><td>Mức độ chính thức</td><td>Quyết định, học phần bắt buộc</td><td>Tuyên bố chính sách</td><td>Thảo luận, định hướng</td></tr>
+        </tbody>
+    </table>
+    <p><strong>Nhận định:</strong> ĐHQGHN có bước đi bài bản nhất khi đưa nội dung này thành học phần bắt buộc ngay từ năm nhất, tích hợp cả kỹ năng sử dụng lẫn đạo đức học thuật.</p>
+
+    <!-- ========== II. THỰC HIỆN NHIỆM VỤ ========== -->
+    <h2>II. Thực hiện nhiệm vụ học tập với sự hỗ trợ của AI</h2>
+    <p><strong>Nhiệm vụ được chọn:</strong> Viết bài luận phân tích chủ đề <strong>"Tác động của Nghị quyết 80/NQ-TW đến phát triển công nghiệp văn hóa Việt Nam"</strong> (1500 từ, có trích dẫn và phân tích phản biện).</p>
+
+    <h3>Bước 1: Sử dụng AI để tổng hợp thông tin</h3>
+    <div class="prompt-box">
+        <div class="prompt-title">📌 Prompt #1:</div>
+        <code>Tôi đang viết bài luận về "Tác động của Nghị quyết 80/NQ-TW đến phát triển công nghiệp văn hóa Việt Nam". Hãy tổng hợp những điểm chính của Nghị quyết liên quan đến công nghiệp văn hóa, bao gồm: định nghĩa, mục tiêu cụ thể (chỉ tiêu GDP, thương hiệu), và các giải pháp đột phá. Cung cấp dưới dạng gạch đầu dòng, có trích dẫn điều khoản cụ thể.</code>
+    </div>
+    <p><strong>Cách tôi xử lý:</strong> Kiểm tra chéo các chỉ tiêu GDP (7% đến 2030, 9% đến 2045) với nguồn chính thống, thấy chính xác. Bổ sung thông tin về mốc thời gian và chỉ tiêu thương hiệu. Loại bỏ phần AI đề cập về "chính sách ưu đãi thuế" vì không có trong văn bản gốc.</p>
+
+    <h3>Bước 2: Sử dụng AI để phát triển luận điểm phản biện</h3>
+    <div class="prompt-box">
+        <div class="prompt-title">📌 Prompt #2:</div>
+        <code>Dựa trên thông tin về Nghị quyết 80/NQ-TW, hãy giúp tôi xây dựng 3 luận điểm phản biện về tính khả thi của mục tiêu công nghiệp văn hóa đóng góp 7% GDP vào 2030. Mỗi luận điểm cần có lý do và dẫn chứng. Đây là bước phát triển ý tưởng cho bài luận, không phải kết luận cuối cùng.</code>
+    </div>
+    <p><strong>Cách tôi xử lý:</strong> Giữ lại cả 3 luận điểm vì có giá trị phản biện tốt. Chỉnh sửa luận điểm 2 bằng cách bổ sung dẫn chứng cụ thể về tỷ lệ đầu tư cho công nghiệp văn hóa của Hàn Quốc. Tự viết phần kết luận cho bài luận vì đây là phần thể hiện quan điểm cá nhân.</p>
+
+    <h3>Bước 3: Minh bạch khai báo sử dụng AI</h3>
+    <div class="info-block">
+        <p><strong>✍️ Tuyên bố sử dụng AI trong bài luận:</strong></p>
+        <p><em>"Trong quá trình thực hiện bài luận này, tôi có sử dụng công cụ AI (ChatGPT) để hỗ trợ: (1) tổng hợp các điểm chính của Nghị quyết 80/NQ-TW; (2) gợi ý các luận điểm phản biện. Tất cả nội dung đã được tôi kiểm chứng, chỉnh sửa và bổ sung từ nguồn chính thống. Tôi hoàn toàn chịu trách nhiệm về nội dung bài viết."</em></p>
+    </div>
+
+    <h3>Tổng kết quá trình sử dụng AI</h3>
+    <table>
+        <thead><tr><th>Giai đoạn</th><th>Vai trò của AI</th><th>Vai trò của tôi</th><th>Mức độ hỗ trợ</th></tr></thead>
+        <tbody>
+            <tr><td>Tìm kiếm/tổng hợp</td><td>Tổng hợp, gạch đầu dòng</td><td>Kiểm tra, bổ sung, loại bỏ</td><td>Hỗ trợ chính</td></tr>
+            <tr><td>Phát triển luận điểm</td><td>Gợi ý ý tưởng</td><td>Chọn lọc, điều chỉnh</td><td>Hỗ trợ thứ cấp</td></tr>
+            <tr><td>Viết kết luận</td><td>Không tham gia</td><td>Tự viết</td><td>Không hỗ trợ</td></tr>
+            <tr><td>Kiểm tra/trích dẫn</td><td>Không tham gia</td><td>Tự kiểm tra chéo</td><td>Không hỗ trợ</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ========== III. VẤN ĐỀ ĐẠO ĐỨC ========== -->
+    <h2>III. Phân tích các vấn đề đạo đức liên quan</h2>
+
+    <h3>3.1. Ranh giới giữa hỗ trợ hợp lý và gian lận học thuật</h3>
+    <table>
+        <thead><tr><th>Hỗ trợ hợp lý (nên làm)</th><th>Gian lận học thuật (không được làm)</th></tr></thead>
+        <tbody>
+            <tr><td>Dùng AI tìm kiếm, tổng hợp tài liệu</td><td>Yêu cầu AI viết toàn bộ bài luận</td></tr>
+            <tr><td>Nhờ AI gợi ý cấu trúc, ý tưởng</td><td>Nộp output của AI mà không chỉnh sửa</td></tr>
+            <tr><td>Dùng AI kiểm tra ngữ pháp, chính tả</td><td>Không khai báo việc sử dụng AI</td></tr>
+            <tr><td>Hỏi AI để hiểu rõ khái niệm phức tạp</td><td>Để AI tạo dữ liệu/trích dẫn giả</td></tr>
+        </tbody>
+    </table>
+    <p><strong>Nguyên tắc xác định ranh giới:</strong> AI là công cụ, không phải tác giả. Mọi ý tưởng và lập luận cốt lõi phải do người học tạo ra.</p>
+
+    <h3>3.2. Vấn đề về quyền sở hữu trí tuệ và trích dẫn</h3>
+    <p>Theo thống nhất tại Hội nghị Trường Đại học Luật Hà Nội: <strong>"Trách nhiệm học thuật luôn thuộc về con người. AI không thể và không được coi là tác giả hay đồng tác giả."</strong> Việc không công khai sử dụng AI được xem là vi phạm chuẩn mực minh bạch và liêm chính học thuật.</p>
+
+    <h3>3.3. Tác động đến quá trình học tập</h3>
+    <p><span class="good">Tích cực:</span> Tăng hiệu suất làm bài, cá nhân hóa quá trình học, phát triển kỹ năng tự học, tiết kiệm thời gian cho các nhiệm vụ giá trị cao hơn.</p>
+    <p><span class="bad">Tiêu cực:</span> Nguy cơ suy giảm tư duy phản biện, ỷ lại công nghệ, đạo văn, và tiếp nhận thông tin sai lệch từ AI.</p>
+
+    <!-- ========== IV. BỘ NGUYÊN TẮC CÁ NHÂN ========== -->
+    <h2>IV. Bộ nguyên tắc cá nhân về sử dụng AI có trách nhiệm</h2>
+
+    <div class="principle">
+        <div class="principle-num">Nguyên tắc 1: AI là công cụ, không phải tác giả</div>
+        <p>Tôi luôn là người chịu trách nhiệm cuối cùng về nội dung học thuật mà tôi nộp. AI chỉ hỗ trợ, không thay thế tư duy của tôi.</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-num">Nguyên tắc 2: Minh bạch và khai báo đầy đủ</div>
+        <p>Tôi sẽ luôn khai báo rõ ràng việc sử dụng AI trong các bài tập, bài luận - mô tả cụ thể công cụ đã dùng và mục đích sử dụng.</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-num">Nguyên tắc 3: Kiểm chứng thông tin</div>
+        <p>Tôi kiểm tra chéo mọi thông tin, dữ liệu, trích dẫn do AI cung cấp với nguồn chính thống trước khi sử dụng.</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-num">Nguyên tắc 4: Phát triển tư duy phản biện</div>
+        <p>Tôi dùng AI để gợi ý ý tưởng, nhưng việc đánh giá, chọn lọc và phát triển luận điểm là do tôi thực hiện.</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-num">Nguyên tắc 5: Không phụ thuộc hoàn toàn vào AI</div>
+        <p>Tôi dành thời gian tự đọc, tự phân tích, tự viết - không để AI làm thay các kỹ năng nền tảng.</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-num">Nguyên tắc 6: Tôn trọng quyền riêng tư và dữ liệu</div>
+        <p>Tôi không cung cấp thông tin cá nhân, dữ liệu nhạy cảm cho các công cụ AI.</p>
+    </div>
+
+    <div class="principle">
+        <div class="principle-num">Nguyên tắc 7: Học cách sử dụng AI hiệu quả</div>
+        <p>Tôi chủ động học kỹ năng viết prompt, hiểu rõ ưu điểm và giới hạn của AI để tận dụng đúng mức.</p>
+    </div>
+
+    <!-- ========== V. INFOGRAPHIC ========== -->
+    <h2>V. Infographic: Sử dụng AI có trách nhiệm trong học thuật</h2>
+    <div class="screenshot">
+        <img src="images/infographic.png" alt="Infographic sử dụng AI có trách nhiệm" onerror="this.style.display='none'">
+        <div class="screenshot-caption">Hình 1: Infographic - Nguyên tắc sử dụng AI có trách nhiệm trong học tập</div>
+    </div>
+
+    <!-- ========== VI. CAM KẾT ========== -->
+    <div class="commitment">
+        <strong>📢 CAM KẾT CỦA TÔI</strong><br>
+        "Tôi sử dụng AI như một công cụ hỗ trợ, không phải người thay thế. Tôi luôn kiểm chứng thông tin, minh bạch khai báo, và phát triển tư duy phản biện của chính mình."
+    </div>
+
+    <!-- ========== VII. KẾT LUẬN ========== -->
+    <h2>VI. Kết luận</h2>
+    <p>Qua bài tập này, tôi nhận thấy việc sử dụng AI trong học tập là xu hướng tất yếu, nhưng cần được thực hiện có trách nhiệm. Các trường đại học tại Việt Nam đang từng bước xây dựng chính sách và hướng dẫn cụ thể. Cá nhân tôi sẽ tuân thủ bộ 7 nguyên tắc đã xây dựng, đồng thời tiếp tục cập nhật và điều chỉnh phù hợp với sự phát triển của công nghệ và quy định của nhà trường.</p>
+
+    <hr>
+    <p style="font-size: 0.8rem; text-align: center; color: #68778d; margin-top: 1.5rem;">
+        📅 Hoàn thành: 15/04/2026 | Môn: Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo | MSSV: 25022799
+    </p>
+</div>
+
+</body>
+</html>

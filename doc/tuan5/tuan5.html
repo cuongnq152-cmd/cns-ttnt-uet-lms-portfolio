@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5 - Sáng tạo nội dung với AI tạo sinh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a0a;
+            padding: 2rem;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #0f0f0f;
+            border-radius: 20px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2a2a2a;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: #60a5fa;
+            border-left: 4px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #38bdf8;
+            margin: 1.8rem 0 0.8rem 0;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #2d2d2d;
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: #facc15;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+
+        .badge {
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            border: 1px solid #334155;
+        }
+
+        .info-block {
+            background: #141414;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        .prompt-box {
+            background: #0a0a0a;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            white-space: pre-wrap;
+        }
+
+        .prompt-title {
+            color: #60a5fa;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+
+        th, td {
+            border: 1px solid #2d2d2d;
+            padding: 0.6rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a1a1a;
+            color: #facc15;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #1a1a1a;
+        }
+
+        .screenshot {
+            margin: 1rem 0;
+            text-align: center;
+            background: #0a0a0a;
+            padding: 0.8rem;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .screenshot-caption {
+            font-size: 0.7rem;
+            color: #68778d;
+            margin-top: 0.4rem;
+            font-style: italic;
+        }
+
+        .screenshot-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        ul, ol {
+            margin: 0.5rem 0 1rem 1.8rem;
+        }
+
+        li {
+            margin: 0.3rem 0;
+        }
+
+        .good {
+            color: #34d399;
+        }
+        .bad {
+            color: #f87171;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #2d2d2d;
+            margin: 1.5rem 0;
+        }
+
+        .step {
+            background: #141414;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            border: 1px solid #2a2a2a;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .container { padding: 1.2rem; }
+            table { font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="badge">🎨 BÀI 5 · SÁNG TẠO NỘI DUNG SỐ VỚI AI TẠO SINH</div>
+
+    <h1>BÁO CÁO DỰ ÁN SÁNG TẠO NỘI DUNG SỐ VỚI AI TẠO SINH</h1>
+
+    <div class="info-block">
+        <p><strong>Họ và tên:</strong> Nguyễn Quốc Cường</p>
+        <p><strong>MSSV:</strong> 25022799</p>
+    </div>
+
+    <hr>
+
+    <!-- ========== I. LỰA CHỌN DỰ ÁN ========== -->
+    <h2>I. Lựa chọn dự án</h2>
+    <p><strong>Tên dự án:</strong> AI trong Ung thư học: Từ chẩn đoán chính xác đến phẫu thuật thông minh – Tài liệu PDF chuyên khảo cho sinh viên Y năm cuối</p>
+    <p><strong>Sản phẩm cuối cùng:</strong> File PDF gồm 12 trang (đính kèm)</p>
+    <p><strong>Lý do chọn dự án:</strong> Đề tài AI trong ung thư học đang rất nóng, có nhiều số liệu cập nhật (2024-2026), phù hợp để thực hành kỹ năng tổng hợp, phân tích và trình bày nội dung khoa học bằng AI tạo sinh.</p>
+
+    <!-- ========== II. 3 CÔNG CỤ AI ========== -->
+    <h2>II. Sử dụng 3 công cụ AI tạo sinh</h2>
+    </table>
+        <thead>
+            <tr><th>Công cụ</th><th>Vai trò</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>DeepSeek</td><td>Xây dựng dàn ý, viết nội dung chính, tóm tắt số liệu, tạo prompt cho các công cụ khác</td></tr>
+            <tr><td>DALL-E 3</td><td>Tạo hình ảnh minh họa (robot phẫu thuật, biểu đồ so sánh, icon chuyên đề)</td></tr>
+            <tr><td>Canva AI (Magic Design + Magic Media)</td><td>Thiết kế bố cục PDF, tạo template chuyên nghiệp, chỉnh sửa và hợp nhất hình ảnh</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ========== III. QUÁ TRÌNH THỰC HIỆN ========== -->
+    <h2>III. Quá trình thực hiện chi tiết</h2>
+
+    <div class="step">
+        <h3>📌 Bước 1: Xử lý nội dung và xây dựng dàn ý với DeepSeek</h3>
+        <div class="prompt-box">
+            <div class="prompt-title">Prompt 1 (Xây dựng dàn ý PDF):</div>
+            <code>"Hãy lập dàn ý chi tiết cho một tài liệu PDF về AI trong ung thư học, dài 10-12 trang, dành cho sinh viên y khoa. Yêu cầu:
+• Trang 1: Tiêu đề ấn tượng + câu mở đầu
+• Trang 2: Vấn đề ung thư toàn cầu (số liệu Việt Nam cụ thể)
+• Trang 3: AI phát hiện khối u trên ảnh (CADe/CADx, CHIEF, PathChat)
+• Trang 4-5: AI Agent & NLP (phân loại bệnh nhân, tóm tắt bệnh án)
+• Trang 6: Robot phẫu thuật Modus V Synaptive
+• Trang 7-8: Thách thức (chi phí, dữ liệu training, dương tính giả, pháp lý)
+• Trang 9-10: Giải pháp (PPP, Federated Learning, AI-as-a-Service)
+• Trang 11: Tương lai (telesurgery, dự báo tiên lượng)
+• Trang 12: Kết luận + thông điệp chính
+Mỗi trang cần có tiêu đề, 3-5 bullet points, và gợi ý loại hình ảnh minh họa."</code>
+        </div>
+        <p><strong>Kết quả:</strong> Dàn ý 12 trang rõ ràng, đầy đủ các mục theo yêu cầu, kèm gợi ý hình ảnh cho từng trang.</p>
+        <p><strong>Chỉnh sửa:</strong> Tôi đã điều chỉnh thứ tự: gộp thách thức và giải pháp vào đúng 4 trang để tiết kiệm không gian và tăng tính kết nối.</p>
+    </div>
+
+    <div class="step">
+        <h3>📌 Bước 2: Viết nội dung chi tiết cho từng trang với DeepSeek</h3>
+        <div class="prompt-box">
+            <div class="prompt-title">Prompt 2 (Nội dung trang 3 – AI phát hiện khối u):</div>
+            <code>"Viết nội dung hoàn chỉnh cho TRANG 3 của PDF với tiêu đề 'AI PHÁT HIỆN KHỐI U TRÊN ẢNH'. Yêu cầu:
+• Giải thích CADe/CADx, có ví dụ Bệnh viện 199 (09/2024)
+• Trình bày CHIEF: 94% chính xác trên 11 loại ung thư, nguồn Harvard – Nature 2024
+• Trình bày PathChat: 90% chính xác từ sinh thiết, vượt GPT-4V, nguồn Đại học Y Harvard 2024
+• Sử dụng định dạng bullet points, có biểu tượng cảm xúc hoặc icon đề xuất
+• Thêm một câu 'takeaway' ở cuối trang"</code>
+        </div>
+        <p><strong>Kết quả:</strong> CADe/CADx – Hệ thống phát hiện & chẩn đoán qua máy tính; CHIEF – 94% chính xác trên 11 loại ung thư; PathChat – 90% chính xác từ sinh thiết.</p>
+    </div>
+
+    <div class="step">
+        <h3>📌 Bước 3: Tạo hình ảnh minh họa với DALL-E 3</h3>
+        <div class="prompt-box">
+            <div class="prompt-title">Prompt 4 (Hình ảnh robot phẫu thuật – trang 6):</div>
+            <code>"Create a medical illustration for a PDF page about robotic brain surgery. Show the Modus V Synaptive robotic system with a surgical arm operating on a human brain. The tumor boundary should glow in red. Add subtle AI neural network lines (blue) around the brain. Background dark blue. Photorealistic but clean, 16:9 aspect ratio, no text."</code>
+        </div>
+        <p><strong>Kết quả:</strong> Hình ảnh robot và đường viền u rõ nét. Tuy nhiên, phần "bó dẫn truyền thần kinh" không được thể hiện rõ.</p>
+        <p><strong>Chỉnh sửa:</strong> Tôi đã tải ảnh vào Canva và dùng công cụ vẽ tay để thêm các đường cong màu vàng mô phỏng bó dẫn truyền thần kinh.</p>
+    </div>
+
+    <div class="step">
+        <h3>📌 Bước 4: Thiết kế và hoàn thiện PDF với Canva AI</h3>
+        <div class="prompt-box">
+            <div class="prompt-title">Prompt 6 (Canva Magic Design – Tạo template PDF):</div>
+            <code>"Tạo template PDF chuyên nghiệp về y học, chủ đề AI trong ung thư học. Phong cách hiện đại, đáng tin cậy, mang tính giáo dục. Màu chủ đạo: xanh dương y tế (#0A5C8E) và trắng. Font chữ: Montserrat cho tiêu đề, Lato cho nội dung. Yêu cầu có: header với icon neural network, số trang ở góc dưới bên phải, khung trích dẫn màu xanh nhạt."</code>
+        </div>
+        <p><strong>Kết quả:</strong> Canva tự động sinh ra 3 template khác nhau. Tôi chọn template số 2 (có phần header lớn và vùng nội dung chia cột linh hoạt).</p>
+        <p><strong>Tích hợp và chỉnh sửa:</strong> Thay thế nội dung mẫu bằng văn bản từ DeepSeek, chèn ảnh DALL-E đã chỉnh sửa, thêm icon bằng Canva Magic Media, điều chỉnh font chữ và màu sắc, thêm khung "Thông điệp chính: AI – Ống nghe thế kỷ 21".</p>
+    </div>
+
+    <!-- ========== MINH CHỨNG ẢNH ========== -->
+    <h3>📸 Minh chứng ảnh chụp màn hình</h3>
+    <div class="screenshot-group">
+        <div class="screenshot">
+            <img src="images/canva_1.png" alt="Canva template 1" onerror="this.style.display='none'">
+            <div class="screenshot-caption">Ảnh 1: Template Canva AI đề xuất</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/canva_2.png" alt="Canva template 2" onerror="this.style.display='none'">
+            <div class="screenshot-caption">Ảnh 2: Thiết kế PDF hoàn thiện trên Canva</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/prompt_1.png" alt="Prompt DeepSeek 1" onerror="this.style.display='none'">
+            <div class="screenshot-caption">Ảnh 3: Prompt xây dựng dàn ý với DeepSeek</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/prompt_2.png" alt="Prompt DeepSeek 2" onerror="this.style.display='none'">
+            <div class="screenshot-caption">Ảnh 4: Prompt viết nội dung AI phát hiện khối u</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/prompt_3.png" alt="Prompt DALL-E" onerror="this.style.display='none'">
+            <div class="screenshot-caption">Ảnh 5: Prompt tạo hình ảnh robot phẫu thuật với DALL-E</div>
+        </div>
+        <div class="screenshot">
+            <img src="images/prompt_4.png" alt="Prompt Canva AI" onerror="this.style.display='none'">
+            <div class="screenshot-caption">Ảnh 6: Prompt tạo template PDF với Canva AI</div>
+        </div>
+    </div>
+
+    <!-- ========== IV. SO SÁNH KẾT QUẢ ========== -->
+    <h2>IV. So sánh kết quả từ các công cụ AI</h2>
+    <table>
+        <thead>
+            <tr><th>Công cụ</th><th>Điểm mạnh</th><th>Điểm yếu</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>DeepSeek</td><td>Tóm tắt chính xác số liệu, hiểu ngữ cảnh y khoa Việt Nam, viết prompt hiệu quả</td><td>Đôi khi quá chi tiết, không tự phát hiện mâu thuẫn logic</td></tr>
+            <tr><td>DALL-E 3</td><td>Tạo hình ảnh y tế chất lượng cao, đẹp, chân thực</td><td>Không hiểu tiếng Việt, sai số liệu/tỷ lệ, cần hậu kỳ nhiều</td></tr>
+            <tr><td>Canva AI</td><td>Tích hợp dễ dàng, tự động bố cục, tiết kiệm ~70% thời gian thiết kế</td><td>Bố cục lộn xộn nếu quá nhiều chữ, template y tế chưa phong phú</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Kết luận so sánh:</h3>
+    <ul>
+        <li>DeepSeek tốt nhất cho nội dung chuyên môn và trích dẫn học thuật</li>
+        <li>DALL-E tốt nhất cho hình ảnh chủ đề trực quan</li>
+        <li>Canva AI tốt nhất cho bố cục và hoàn thiện sản phẩm</li>
+    </ul>
+
+    <!-- ========== V. ĐÁNH GIÁ AI ========== -->
+    <h2>V. Đánh giá AI: Điểm mạnh và hạn chế</h2>
+
+    <h3>1. Những phần AI làm tốt</h3>
+    <ul>
+        <li><span class="good">Tăng tốc xử lý thông tin:</span> DeepSeek đọc hiểu và tóm tắt nội dung chỉ trong vài giây</li>
+        <li><span class="good">Giảm rào cản thiết kế:</span> Canva AI giúp người không chuyên tạo PDF chuyên nghiệp</li>
+        <li><span class="good">Trực quan hóa dữ liệu phức tạp:</span> DALL-E mô phỏng robot phẫu thuật mà không cần ảnh có bản quyền</li>
+    </ul>
+
+    <h3>2. Những phần còn hạn chế</h3>
+    <ul>
+        <li><span class="bad">Thiếu chính xác tuyệt đối về số liệu:</span> DeepSeek có thể "ảo hóa" số liệu; DALL-E vẽ biểu đồ sai tỷ lệ</li>
+        <li><span class="bad">Không hiểu ngữ cảnh văn hóa địa phương:</span> DALL-E tạo icon bảo hiểm giống Mỹ, Canva đề xuất template có ảnh bác sĩ da trắng</li>
+        <li><span class="bad">Rủi ro đạo văn gián tiếp:</span> Template Canva AI có thể trùng lặp với infographic có bản quyền</li>
+    </ul>
+
+    <h3>3. AI thay đổi quy trình sáng tạo của tôi như thế nào?</h3>
+    <ul>
+        <li><span class="good">Trước đây (không AI):</span> Đọc tài liệu → Gạch ý chính → Viết nháp → Tìm ảnh → Chọn template → Ghép nội dung → Chỉnh sửa → Xuất file (≈ 8-10 giờ)</li>
+        <li><span class="good">Sau khi dùng AI:</span> Prompt dàn ý → Prompt nội dung → Prompt ảnh → Canva AI gợi ý template → Tích hợp và tinh chỉnh → Xuất PDF (≈ 3 giờ)</li>
+    </ul>
+    <p><strong>Thay đổi lớn nhất:</strong> Tôi chuyển từ vai trò "người làm tất cả" sang "người lên ý tưởng, ra quyết định và kiểm định". AI làm phần nặng nhọc, tôi làm phần chất lượng.</p>
+
+    <!-- ========== VI. VẤN ĐỀ ĐẠO ĐỨC ========== -->
+    <h2>VI. Các vấn đề đạo đức cần cân nhắc</h2>
+    <ul>
+        <li><span class="good">Quyền tác giả:</span> AI đóng góp khoảng 45% (nội dung thô + template + ảnh thô), tôi đóng góp 55% (kiểm tra số liệu, chỉnh sửa, sắp xếp logic, viết thông điệp kết luận).</li>
+        <li><span class="good">Tính minh bạch:</span> Trong báo cáo này, tôi đã kê khai đầy đủ prompt và công cụ đã dùng.</li>
+        <li><span class="bad">Nguy cơ đồng nhất hóa:</span> Nếu nhiều sinh viên dùng cùng công cụ với prompt tương tự, sản phẩm sẽ rất giống nhau.</li>
+        <li><span class="bad">Trách nhiệm với thông tin sai lệch:</span> Tôi đã phải đối chiếu từng con số với nguồn gốc được trích dẫn. AI không chịu trách nhiệm pháp lý về độ chính xác.</li>
+    </ul>
+
+    <!-- ========== VII. KẾT LUẬN ========== -->
+    <h2>VII. Kết luận</h2>
+    <p>Dự án này chứng minh rằng AI tạo sinh không phải là "cỗ máy thay thế con người" mà là "trợ lý đắc lực" nếu biết cách sử dụng đúng. DeepSeek giúp viết nội dung chuyên môn nhanh gấp 3-4 lần, DALL-E giúp có hình ảnh độc đáo không tốn bản quyền, Canva AI giúp thiết kế chuyên nghiệp dù không có kỹ năng đồ họa.</p>
+    <p>Tuy nhiên, mọi quyết định quan trọng – chọn số liệu nào để nhấn mạnh, thông điệp chính là gì, bố cục nào dễ đọc nhất – đều do tôi quyết định. AI làm nhanh, nhưng không làm thay suy nghĩ. Sản phẩm cuối cùng là kết quả của sự cộng sinh giữa trí tuệ nhân tạo và tư duy con người.</p>
+
+    <div class="info-block" style="background: #0f2f1f; border-left: 4px solid #34d399; margin-top: 1rem;">
+        ✅ <strong>Link dự án Canva:</strong> <a href="https://www.canva.com/design/DAHG1vbc_7E/6-dWK7cX21hyLDgOVqMZmQ/edit" target="_blank" style="color:#60a5fa;">https://www.canva.com/design/DAHG1vbc_7E/6-dWK7cX21hyLDgOVqMZmQ/edit</a>
+    </div>
+
+    <hr>
+    <p style="font-size: 0.8rem; text-align: center; color: #68778d; margin-top: 1.5rem;">
+        📅 Hoàn thành: 15/04/2026 | Môn: Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo | MSSV: 25022799
+    </p>
+</div>
+
+</body>
+</html>
